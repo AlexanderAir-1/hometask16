@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@import "./variables";
+
+body {
+    font: normal 16px/1.21 "Montserrat", sans-serif;
+    color: $dark-text-color;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+.container_ {
+    padding-left: 16px;
+    padding-right: 16px;
+    
+    @media screen and (min-width: $desktop-width) {
+        max-width: $desktop-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+// header //
+
+.header {
+    background-color: $dark-text-color;
+    color: $white-brand-color;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.32);
+}
+
+.mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    
+    &.cart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+

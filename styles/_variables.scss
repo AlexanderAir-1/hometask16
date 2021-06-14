@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 300;
+    src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 700;
+    src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.ttf") format("ttf");
+}
+
+$main-bg-color: #E5E5E5;
+$main-brand-color: #FF7A00;
+$white-brand-color: #FFFFFF;
+$light-brand-color: #FFF2E5;
+$light-text-color: #FFF1E3;
+$dark-text-color: #222222;
+$hover-button-color: #DA6401;
+$dark-grey-color: #9A9A9A;
+$grey-color: #DFDFDF;
+$light-grey-color: #DFDFDF;
+$text-color: #C4C4C4;
+
+$tablet-width: 769px;
+$desktop-width: 1200px;
+
