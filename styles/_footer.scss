@@ -1,0 +1,95 @@
+// START footer //
+.footer {
+    background-color: $dark-text-color;
+    color: $white-brand-color;
+    padding-top: 24px;
+    padding-bottom: 64px;
+    & .container_ > div:not(:first-child) {
+        padding-top: 24px;
+    }
+    & a {
+        line-height: 32px;
+    }
+    & .follow-items {
+        & a {
+            padding: 5px;
+        }
+    }
+}
+
+.footer-links .home-link {
+    padding: 0px 0px 0px 0px;
+}
+
+@media screen and (min-width: $tablet-width) {
+    .footer {
+        & .container_ {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 90px;
+
+            & h3 {
+                padding-bottom: 32px;
+            }
+
+            & .logo1 {
+                grid-column: 1 / 3;
+                grid-row: 1;
+                margin-left: 32px;
+                margin-top: 40px;
+            }
+            & .footer-links {
+                grid-column: 2 / 3;
+                grid-row: 1;
+            }
+            & .geo {
+                grid-column: 3 / 3;
+                grid-row: 1;
+            }
+            & .contacts {
+                grid-column: 2 / 3;
+                grid-row: 2;
+            }
+            & .follow {
+                grid-column: 3 / 3;
+                grid-row: 2;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    .footer {
+        padding-bottom: 150px;
+        & .container_ {
+            display: grid;
+            grid-template-columns: 1fr, 2fr, 1fr, 1fr, 1fr;
+            grid-gap: 40px;
+
+            & .logo1 {
+                grid-column: 1 / 5;
+                grid-row: 1;
+                margin-top: 40px;
+            }
+            & .footer-links {
+                grid-column: 2 / 5;
+                grid-row: 1;
+            }
+            & .geo {
+                grid-column: 4 / 5;
+                grid-row: 1;
+            }
+            & .contacts {
+                grid-column: 3 / 5;
+                grid-row: 1;
+            }
+            & .follow {
+                grid-column: 5 / 5;
+                grid-row: 1;
+            }
+        }
+    }
+}
+
+
+// END footer //

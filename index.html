@@ -6,38 +6,517 @@
     <title>Final</title>
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
-<body>
+<body><!-- class="contact-popup-on" -->
+    <div class="popup">
+        <div class="popup-inner">
+            <div class="container_">
+                <div class="close-button">
+                    <a href="#"><img src="./icons/close_black.svg" alt="close-button-black"></a>
+                </div>
+                <div class="contact-block">
+                    <h3>Contact us!</h3>
+                    <p>Please leave your details and our manager will contact you within an hour.</p>
+                    <form class="form">
+                        <div class="name">
+                            <p class="capitalized">name</p>
+                            <input type="text" placeholder="gregory simmmons" class="capitalized">
+                        </div>
+                        <div class="email">
+                            <p class="capitalized">email</p>
+                            <input type="email" placeholder="dwight.fleming@example.com">
+                        </div>
+                        <div class="phone">
+                            <p class="capitalized">phone</p>
+                            <input type="tel" placeholder="(307) 555-0133">
+                        </div>
+                        <div>
+                            <p>Your comment</p>
+                            <textarea placeholder="Please leave your comment" rows=3></textarea>
+                        </div>
+                        <div class="buttons">
+                            <button class="book-now uppercase">contact me</button>
+                        </div>
+                    </form>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <input type="checkbox" id="menu-button">
+    <nav class="nav">
+        <label for="menu-button" class="menu-button" role="button"><img src="./icons/bars-button.svg" alt="menu-button"></label>
+        <div class="menu-mobile">
+            <div class="header-logo"><img src="./icons/logo3.svg" alt="logo_img"></div>
+            <div class="menu-mobile-links">
+                <div class="home-link dotted">
+                    <div class="orange-point"></div>
+                    <a href="./index.html">Home</a>
+                </div>
+                <div class="home-link dotted">
+                    <div class="orange-point"></div>
+                    <a href="./shop.html">Shop</a>
+                </div>
+                <div class="home-link dotted">
+                    <div class="orange-point"></div>
+                    <a href="#">Gallery</a>
+                </div>
+                <!-- Plan B!
+                <a href="#" class="mobile-link active">Home</a>
+                <a href="#" class="mobile-link">Shop</a>
+                <a href="#" class="mobile-link">Gallery</a> -->
+            </div>
+            <div class="mobile-header-buttons">
+                <button class="ctc-us uppercase">contact us</button>
+                <button class="book-now uppercase">book now</button>
+            </div>
+        </div>
+    </nav>
     <!-- HEADER -->
     <header class="header">
         <div class="container_">
             <div class="mobile-header">
-                <div class="bars">
-                    [=]
-                </div>
                 <a href="#" class="cart">
-                    <icon><img src="icons/cart-button.svg"></icon>
+                    <img src="icons/cart-button.svg" alt="cart">
                     <span>0</span>
                 </a>
             </div>
-            <div class="desctop-header">
-                
+            <div class="desktop-header">
+                <div class="logo1">
+                    <img src="./icons/logo4.svg" alt="logo">
+                </div>
+                <div class="header-links">
+                    <div class="home-link dotted">
+                        <div class="orange-point"></div>
+                        <a href="./index.html">Home</a>
+                    </div>
+                    <div class="home-link dotted">
+                        <div class="orange-point"></div>
+                        <a href="./shop.html">Shop</a>
+                    </div>
+                    <div class="home-link dotted">
+                        <div class="orange-point"></div>
+                        <a href="#">Gallery</a>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="cart">
+                        <img src="icons/cart-button.svg" alt="cart">
+                        <span>0</span>
+                    </div>
+                </a>
+                <div class="header-buttons">
+                    <button class="ctc-us uppercase">contact us</button>
+                    <button class="book-now uppercase">book now</button>
+                </div>
             </div>
         </div>
     </header>
     <!-- MAIN -->
     <div class="content">
-        <div class="container_"></div>
-        <div class="container_"></div>
-        <div class="container_"></div>
-        <div class="container_"></div>
-        <div class="container_"></div>
-        <div class="container_"></div>
-        <div class="container_"></div>
+        <!-- banner section   -->
+        <section class="banner">
+            <div class="container_">
+                <div class="logo2">
+                    <img src="./icons/logo2.svg" alt="logo2">
+                </div>
+                <p>Our barbershop  is a place of style and mutual understanding in which it is pleasant to spend time.</p>
+                <div class="banner-buttons">
+                    <button class="uppercase book-now">book now</button>
+                </div>
+            </div>
+        </section>
+        <!-- services section     -->
+        <section class="services">
+            <div class="container_">
+                <div class="chapter-services dotted">
+                    <div class="orange-point-medium"></div>
+                    <h3 class="uppercase">our services</h3>
+                </div>
+            </div>
+            <div class="background">
+                <div class="container_">
+                    <div class="set-services">
+                        <div class="service">
+                            <div class="tool-icon"><img src="./icons/tool-icons/tool-icon-1.svg" alt="tool-icon-1"></div>
+                            <div class="service-description">
+                                <h3>Men's haircut</h3>
+                                <p>60 min.<br>350 / 400 / 450 ₴</p>
+                            </div>
+                        </div>
+                        <div class="service">
+                            <div class="tool-icon"><img src="./icons/tool-icons/tool-icon-2.svg" alt="tool-icon-2"></div>
+                            <div class="service-description">
+                                <h3>Men's haircut</h3>
+                                <p>60 min.<br>350 / 400 / 450 ₴</p>
+                            </div>
+                        </div>
+                        <div class="service">
+                            <div class="tool-icon"><img src="./icons/tool-icons/tool-icon-3.svg" alt="tool-icon-3"></div>
+                            <div class="service-description">
+                                <h3>Men's haircut</h3>
+                                <p>60 min.<br>350 / 400 / 450 ₴</p>
+                            </div>
+                        </div>
+                        <div class="service">
+                            <div class="tool-icon"><img src="./icons/tool-icons/tool-icon-4.svg" alt="tool-icon-4"></div>
+                            <div class="service-description">
+                                <h3>Men's haircut</h3>
+                                <p>60 min.<br>350 / 400 / 450 ₴</p>
+                            </div>
+                        </div>
+                        <div class="service">
+                            <div class="tool-icon"><img src="./icons/tool-icons/tool-icon-5.svg" alt="tool-icon-5"></div>
+                            <div class="service-description">
+                                <h3>Men's haircut</h3>
+                                <p>60 min.<br>350 / 400 / 450 ₴</p>
+                            </div>
+                        </div>
+                        <div class="service">
+                            <div class="tool-icon"><img src="./icons/tool-icons/tool-icon-6.svg" alt="tool-icon-6"></div>
+                            <div class="service-description">
+                                <h3>Men's haircut</h3>
+                                <p>60 min.<br>350 / 400 / 450 ₴</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </section>
+        <!-- team section     -->
+        <section class="team">
+            <div class="container_">
+                <div class="chapter-team dotted">
+                    <div class="orange-point-medium"></div>
+                    <h3 class="uppercase">our team</h3>
+                </div>
+                <div class="persons">
+                    <div class="person-image-container">
+                        <div class="person"><img src="images/persons/person2_small.jpg" alt="person-image"></div>
+                        <div class="person active"><img src="images/persons/person1.jpg" alt="person-image"></div>
+                        <div class="person"><img src="images/persons/person3.jpg" alt="person-image"></div>
+                        <div class="person"><img src="images/persons/person4.jpg" alt="person-image"></div>
+                    </div>
+                    <div class="slider-arrow">
+                        <button class="uppercase arrow"><img src="./icons/buttons/arrow_right.svg" alt=">"></button>
+                    </div>
+                </div>
+                <div class="person-story">
+                    <h4>Jorge Jones</h4>
+                    <p>
+                    - How did you become a barber?<br>
+                    - I decided to master the creative profession. And he found himself precisely in this. So my life has changed dramatically.<br>
+                    - What exactly do you like in your profession? Why are you blissing?<br>
+                    - I like to work in a men's team, communicating with interesting people.<br>
+                    - Why should a person who wants a haircut choose you?<br>
+                    - Because I'm old and charismatic.<br>
+                    </p>
+                </div>
+            </div>    
+        </section>
+        <!-- book section     -->
+        <section class="book">
+            <div class="background">
+                <div class="container_">
+                    <h3>Book an appointment right now!</h3>
+                    <p>Please complete all these fields.</p>
+                    <form class="form">
+                        <div class="name">
+                            <p class="capitalized">name</p>
+                            <input type="text" placeholder="gregory simmmons" class="capitalized">
+                        </div>
+                        <div class="dt">
+                            <div class="date">
+                                <p class="capitalized">date</p>
+                                <input type="text" placeholder="Enter date">
+                            </div>
+                            <div class="time">
+                                <p class="capitalized">time</p>
+                                <input type="text" placeholder="Enter time">
+                            </div>
+                        </div>    
+                        <div class="master-form">
+                            <p>Choose a master:</p>
+                            <div class="master-form-content">
+                                <div class="radio-container">
+                                    <label for="radio1">
+                                        <input id="radio1" type="radio" name="radio" value="1">
+                                        <i class="off"><img src="./icons/radio-button-off.svg" alt="radio-button-off"></i>
+                                        <i class="on"><img src="./icons/radio_button.svg" alt="radio_button"></i>
+                                        <span>Choose comeone</span>
+                                    </label>
+                                </div>
+                                <div class="radio-container">
+                                    <label for="radio2">
+                                        <input id="radio2" type="radio" name="radio" value="2">
+                                        <i class="off"><img src="./icons/radio-button-off.svg" alt="radio-button-off"></i>
+                                        <i class="on"><img src="./icons/radio_button.svg" alt="radio_button"></i>
+                                        <span>Choose comeone</span>
+                                    </label>
+                                </div>
+                                <div class="radio-container">
+                                    <label for="radio3">
+                                        <input id="radio3" type="radio" name="radio" value="3">
+                                        <i class="off"><img src="./icons/radio-button-off.svg" alt="radio-button-off"></i>
+                                        <i class="on"><img src="./icons/radio_button.svg" alt="radio_button"></i>
+                                        <span>Choose comeone</span>
+                                    </label>
+                                </div>
+                                <div class="radio-container">
+                                    <label for="radio4">
+                                        <input id="radio4" type="radio" name="radio" value="4">
+                                        <i class="off"><img src="./icons/radio-button-off.svg" alt="radio-button-off"></i>
+                                        <i class="on"><img src="./icons/radio_button.svg" alt="radio_button"></i>
+                                        <span>Choose comeone</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-form">
+                        <p>Choose a service:</p>
+                        <div class="service-form-content">
+                            <div class="checkbox-container">
+                                <label for="my-checkbox1">
+                                    <input type="checkbox" id="my-checkbox1">
+                                    <i class="not-checked"><img src="./icons/check_box_off_24px.svg" alt="not checked"></i>
+                                    <i class="checked"><img src="./icons/check_box_24px.svg" alt="checked"></i>
+                                    <span>Choose something</span>
+                                </label>
+                            </div>
+                            <div class="checkbox-container">
+                                <label for="my-checkbox2">
+                                    <input type="checkbox" id="my-checkbox2">
+                                    <i class="not-checked"><img src="./icons/check_box_off_24px.svg" alt="not checked"></i>
+                                    <i class="checked"><img src="./icons/check_box_24px.svg" alt="checked"></i>
+                                    <span>Choose something</span>
+                                </label>
+                            </div>
+                            <div class="checkbox-container">
+                                <label for="my-checkbox3">
+                                    <input type="checkbox" id="my-checkbox3">
+                                    <i class="not-checked"><img src="./icons/check_box_off_24px.svg" alt="not checked"></i>
+                                    <i class="checked"><img src="./icons/check_box_24px.svg" alt="checked"></i>
+                                    <span>Choose something</span>
+                                </label>
+                            </div>
+                            <div class="checkbox-container">
+                                <label for="my-checkbox4">
+                                    <input type="checkbox" id="my-checkbox4">
+                                    <i class="not-checked"><img src="./icons/check_box_off_24px.svg" alt="not checked"></i>
+                                    <i class="checked"><img src="./icons/check_box_24px.svg" alt="checked"></i>
+                                    <span>Choose something</span>
+                                </label>
+                            </div>
+                            <div class="checkbox-container">
+                                <label for="my-checkbox5">
+                                    <input type="checkbox" id="my-checkbox5">
+                                    <i class="not-checked"><img src="./icons/check_box_off_24px.svg" alt="not checked"></i>
+                                    <i class="checked"><img src="./icons/check_box_24px.svg" alt="checked"></i>
+                                    <span>Choose something</span>
+                                </label>
+                            </div>
+                            <div class="checkbox-container">
+                                <label for="my-checkbox6">
+                                    <input type="checkbox" id="my-checkbox6">
+                                    <i class="not-checked"><img src="./icons/check_box_off_24px.svg" alt="not checked"></i>
+                                    <i class="checked"><img src="./icons/check_box_24px.svg" alt="checked"></i>
+                                    <span>Choose something</span>
+                                </label>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="buttons">
+                            <button class="book-now uppercase">book now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>                
+        </section>
+        <!-- products section     -->
+        <section class="products">
+            <div class="container_">
+                <div class="dotted">
+                    <div class="orange-point-medium"></div>
+                    <h3 class="uppercase">popular products</h3>
+                </div>
+                <div class="products-kit">
+                    <div class="product">
+                        <img src="./images/product.jpg" alt="product">
+                        <string class="prod-heading capitalized">barbers</string>
+                        <p class="prod-desc">
+                            Premium beard balm<br>50 ml<br>New York original
+                        </p>
+                        <string class="price">$ 490.00</string>
+                        <div class="prod-buttons">
+                            <button class="shop-now uppercase">shop now</button>
+                            <button class="uppercase add"><img src="./icons/buttons/plus.svg" alt="+"></button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/product.jpg" alt="product">
+                        <string class="prod-heading capitalized">barbers</string>
+                        <p class="prod-desc">
+                            Premium beard balm<br>50 ml<br>New York original
+                        </p>
+                        <string class="price">$ 490.00</string>
+                        <div class="prod-buttons">
+                            <button class="shop-now uppercase">shop now</button>
+                            <button class="uppercase add"><img src="./icons/buttons/plus.svg" alt="+"></button>
+                        </div>
+                    </div>
+                    <div class="product sale">
+                        <img src="./images/product.jpg" alt="product sale">
+                        <string class="prod-heading capitalized">barbers</string>
+                        <p class="prod-desc">
+                            Premium beard balm<br>50 ml<br>New York original
+                        </p>
+                        <string class="price">$ 490.00</string>
+                        <div class="prod-buttons">
+                            <button class="shop-now uppercase">shop now</button>
+                            <button class="uppercase add"><img src="./icons/buttons/plus.svg" alt="+"></button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/product.jpg" alt="product">
+                        <string class="prod-heading capitalized">barbers</string>
+                        <p class="prod-desc">
+                            Premium beard balm<br>50 ml<br>New York original
+                        </p>
+                        <string class="price">$ 490.00</string>
+                        <div class="prod-buttons">
+                            <button class="shop-now uppercase">shop now</button>
+                            <button class="uppercase add"><img src="./icons/buttons/plus.svg" alt="+"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrows">
+                    <button class="uppercase arrow-transparent left"><img src="./icons/buttons/arrow_right.svg" alt="<"></button>
+                    <button class="uppercase arrow-transparent"><img src="./icons/buttons/arrow_right.svg" alt=">"></button>
+                </div>
+            </div>
+        </section>
+        <!-- reviews section  -->
+        <section class="reviews">
+            <div class="background">
+                <div class="container_">
+                    <div class="dotted">
+                        <div class="orange-point-medium"></div>
+                        <h3 class="uppercase">our reviews</h3>
+                    </div>
+                    <div class="persons">
+                        <div class="slider-arrow desktop-only">
+                            <button class="uppercase arrow-transparent left"><img src="./icons/buttons/arrow_right.svg" alt="<"></button>
+                        </div>
+                        <div class="person-image-container">
+                            <div class="person"><img src="images/persons/person1_small.jpg" alt="person-image"></div>
+                            <div class="person active-r"><img src="images/persons/person2.jpg" alt="person-image"></div>
+                            <div class="person"><img src="images/persons/person3.jpg" alt="person-image"></div>
+                            <div class="person"><img src="images/persons/person4.jpg" alt="person-image"></div>
+                        </div>
+                        <div class="slider-arrow">
+                            <button class="uppercase arrow-transparent"><img src="./icons/buttons/arrow_right.svg" alt=">"></button>
+                        </div>
+                    </div>
+                    <div class="person-story">
+                        <h4>Jorge Jones</h4>
+                        <p>
+                            - How did you become a barber?<br>
+                            - I decided to master the creative profession. And he found himself precisely in this. So my life has changed dramatically.<br>
+                            - What exactly do you like in your profession? Why are you blissing?<br>
+                            - I like to work in a men's team, communicating with interesting people.<br>
+                            - Why should a person who wants a haircut choose you?<br>
+                            - Because I'm old and charismatic.<br>
+                        </p>
+                    </div>    
+                </div>
+            </div>
+        </section>
+        <!-- where section    -->
+        <section class="where">
+            <div class="container_">
+                <div class="contact-us">
+                    <h4 class="uppercase">contact us</h4>
+                    <div class="contact-items">
+                        <a href="#">Ukraine, Kyiv<br>str. Oleshi 15, 62000</a>
+                        <a href="mailto:support@gmail.com">support@gmail.com</a>
+                        <a href="tel:+38044152566954">+38 (044) 15 25 66 954</a>
+                    </div>
+                    <div class="follow-items">
+                        <a href="#"><img src="./icons/follow-icons/insta_black.svg" alt="insta"></a>
+                        <a href="#"><img src="./icons/follow-icons/youtube_black.svg" alt="youtube"></a>
+                        <a href="#"><img src="./icons/follow-icons/fb_black.svg" alt="facebook"></a>
+                    </div>
+                </div>
+                <div class="schedule">
+                    <h4 class="uppercase">schedule</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>mon - fri</td>
+                                <td>10:00 - 22:00</td>
+                            </tr>
+                        </thead>
+                            <tr>
+                                <td>sut - sun</td>
+                                <td>12:00 - 22:00</td>
+                            </tr>
+                        </table>
+                </div>
+                <div class="map">
+                    <img src="./images/map.jpg" alt="map_image">
+                </div>
+            </div>
+            <div class="background"></div>
+        </section>
     </div>
+
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container_">
-
+            <div class="logo1">
+                <img src="./icons/logo1.svg" alt="logo1">
+            </div>
+            <div class="footer-links">
+                <div class="home-link dotted">
+                    <div class="orange-point"></div>
+                    <a href="./index.html">Home</a>
+                </div>
+                <div class="home-link dotted">
+                    <div class="orange-point"></div>
+                    <a href="./shop.html">Shop</a>
+                </div>
+                <div class="home-link dotted">
+                    <div class="orange-point"></div>
+                    <a href="#">Gallery</a>
+                </div>
+                <div class="home-link dotted">
+                    <div class="orange-point"></div>
+                    <a href="#">Contact us</a>
+                </div>
+            </div>
+            <div class="geo">
+                <h3 class="uppercase">visit us</h3>
+                <a href="#" class="contact-items">
+                    <string>Ukraine, Kyiv<br>str. Oleshi 15, 62000</string>
+                </a>
+            </div>
+            <div class="contacts">
+                <h3 class="uppercase">contact us</h3>
+                <div class="contact-items">
+                    <div>
+                        <a href="mailto:support@gmail.com">support@gmail.com</a>
+                    </div>
+                    <div>
+                        <a href="tel:+38044152566954">+38 (044) 15 25 66 954</a>
+                    </div>
+                </div>
+            </div>
+            <div class="follow">
+                <h3 class="uppercase">follow us</h3>
+                <div class="follow-items">
+                    <a href="#"><img src="./icons/follow-icons/insta_white.svg" alt="insta"></a>
+                    <a href="#"><img src="./icons/follow-icons/youtube_white.svg" alt="youtube"></a>
+                    <a href="#"><img src="./icons/follow-icons/fb_white.svg" alt="facebook"></a>
+                </div>
+            </div>
         </div>
     </footer>
 </body>

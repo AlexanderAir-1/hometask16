@@ -1,0 +1,229 @@
+%button {
+    border-radius: 4px;
+    font: normal 16px/1.21 "Montserrat", sans-serif;
+    height: 52px;
+    transition: background-color 300ms ease;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    padding: 16px 32px 16px 32px;
+    color: $white-brand-color;
+}
+
+.ctc-us {
+    @extend %button;
+    background-color: $dark-text-color;
+    border: 1px solid $white-brand-color;
+    &.ctc-us:hover {
+        background-color: $hover-button-color1;
+    }
+}
+
+.book-now {
+    @extend %button;
+    background-color: $main-brand-color;
+    border: 1px solid $main-brand-color;
+    &.book-now:hover {
+        background-color: $hover-button-color;
+    }
+}
+
+.add {
+    @extend %button;
+    border: 1px solid $dark-text-color;
+    padding: 16px 16px 16px 16px;
+    background-color: $white-brand-color;
+    color: $dark-text-color;
+    width: 52px;
+    &.add:hover {
+        background-color: $light-brand-color;
+    }
+}
+
+.arrow {
+    @extend %button;
+    border: 1px solid transparent;
+    padding: 16px 16px 16px 16px;
+    background-color: $light-brand-color;
+    color: $main-brand-color;
+    width: 52px;
+    &.arrow:hover {
+        background-color: $hover-button-color2;
+    }
+}
+
+.arrow-transparent {
+    @extend %button;
+    border: 1px solid transparent;
+    padding: 16px 16px 16px 16px;
+    background-color: transparent;
+    color: $main-brand-color;
+    width: 52px;
+    &.arrow-transparent:hover {
+        background-color: $hover-button-color2;
+    }
+}
+
+.left {
+    transform: rotate(180deg);
+}
+
+.shop-now {
+    @extend %button;
+    border: 1px solid $dark-text-color;
+    background-color: $white-brand-color;
+    color: $dark-text-color;
+    &.shop-now:hover {
+        background-color: $light-brand-color;
+    }
+}
+
+input, textarea {
+    padding: 16px 24px 16px 24px;
+    border: 1px solid $grey-color;
+    border-radius: 4px;
+    line-height: 20px;
+    font-size: 16px;
+    color: $dark-text-color;
+    transition: border 300ms ease;
+
+}
+
+input:hover, textarea:hover {
+    border: 1px solid $dark-grey-color;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border: 1px solid $main-brand-color;
+    outline: none;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    line-height: 20px;
+    color: $light-grey-color;
+}
+
+/* Start checkbox */
+.checkbox-container {
+    font-size: 16px;
+    & label {
+        cursor: pointer;
+        padding-left: 30px;
+        position: relative;
+    }
+    & i {
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+    & #my-checkbox1, #my-checkbox2, #my-checkbox3, #my-checkbox4, #my-checkbox5, #my-checkbox6 {
+        height: 0;
+        width: 0;
+        position: absolute;
+        & ~ .checked {
+            display: none;
+        }
+        &:checked ~ .not-checked {
+            display: none;
+        }
+        &:checked ~ .checked {
+            display: block;
+        }
+    }
+}
+.checkbox-container:not(:last-child) {
+    padding-bottom: 5px;
+}
+
+/* End checkbox */
+
+/* Start radiobutton */
+
+.radio-container {
+    font-size: 16px;
+    & label {
+        cursor: pointer;
+        padding-left: 30px;
+        position: relative;
+    }
+    & i {
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+    & #radio1, #radio2, #radio3, #radio4 {
+        height: 0;
+        width: 0;
+        position: absolute;
+        & ~ .on {
+            display: none;
+        }
+        &:checked ~ .off {
+            display: none;
+        }
+        &:checked ~ .on {
+            display: block;
+        }
+    }
+}
+.radio-container:not(:last-child) {
+    padding-bottom: 5px;
+}
+
+/* End radiobutton */
+
+/* Start product */
+
+.product {
+    max-width: 286px;
+    padding: 32px;
+
+    & > img {
+        padding-bottom: 25px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    & .prod-heading {
+        font-weight: 700;
+        padding-bottom: 8px;
+    }
+
+    & .prod-desc {
+        padding-bottom: 16px;
+    }
+
+    & .price {
+        font-weight: 700;
+        color: $main-brand-color;
+    }
+
+    & .prod-buttons {
+        padding-top: 24px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.product.sale {
+    position: relative;
+}
+
+.product.sale::before {
+    content: 'SALE';
+    text-align: center;
+    line-height: 42px;
+    display: block;
+    position: absolute;
+    left: 0; 
+    top: 0;
+    width: 129px;
+    height: 42px;
+    background-color: $main-brand-color;
+    color: $white-brand-color;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+/* End product */
