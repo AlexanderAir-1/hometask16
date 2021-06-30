@@ -4,8 +4,13 @@
 }
 
 @import "./variables";
+@import "./header";
+@import "./footer";
+@import "./elements";
+@import "./popup";
+@import "./sidebar";
 
-body {
+body, textarea {
     font: normal 16px/1.21 "Montserrat", sans-serif;
     color: $dark-text-color;
 }
@@ -15,21 +20,50 @@ a {
     color: inherit;
 }
 
-h1 {
-    font-size: 64px;
+
+.dotted {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 16px;
+    padding-left: 18px;
+    & .orange-point {
+        visibility: hidden;
+        width: 5px;
+        height: 5px;
+        margin-right: 4px;
+        border-radius: 100%;
+        background-color: $main-brand-color;
+    }
+    & .orange-point-medium {
+        width: 9px;
+        height: 9px;
+        margin-right: 8px;
+        border-radius: 100%;
+        background-color: $main-brand-color;
+        @media screen and (min-width: $desktop-width) {
+            width: 21px;
+            height: 21px;
+        }
+    }
 }
 
-h2 {
-    font-size: 32px;
-}
-
-h3 {
-    font-size: 16px;
+.dotted:hover {
+    color: $main-brand-color;
+    font-weight: 700;
+    & .orange-point {
+        visibility: visible;
+    }
 }
 
 .container_ {
     padding-left: 16px;
     padding-right: 16px;
+
+    @media screen and (min-width: $tablet-width) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
     
     @media screen and (min-width: $desktop-width) {
         max-width: $desktop-width;
@@ -38,29 +72,630 @@ h3 {
     }
 }
 
-
-// header //
-
-.header {
-    background-color: $dark-text-color;
-    color: $white-brand-color;
-    padding-top: 21px;
-    padding-bottom: 21px;
-    position: sticky;
-    top: 0;
-    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.32);
+.dotted h3 {
+    color: $main-brand-color;
 }
 
-.mobile-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    
-    &.cart {
+/* banner */
+.banner {
+    background-image: -webkit-image-set( url("../images/banner-bg.jpg") 1x, url("../images/banner-bg@2x.jpg") 2x );
+    @media screen and (max-width: $tablet-width) {
+        background-image: url(../images/banner-bg-mob.jpg);
+    }
+    @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+        background-image: url(../images/banner-bg-tab.jpg);
+    }
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+    & .container_ {
+        padding-top: 200px;
+        padding-bottom: 50px;
+        @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+            max-width: 55%;
+        }
+        @media screen and (min-width: $desktop-width) {
+            padding-bottom: 300px;
+            & > * {
+                width: 55%;
+            }
+        }
+        & p {
+            color: $light-text-color;
+            margin-bottom: 16px;
+            @media screen and (min-width: $tablet-width) {
+                font-weight: 700;
+            }
+            @media screen and (min-width: $desktop-width) {
+                font-size: 32px;
+            }
+        }
+        & .logo2 {
+            padding-bottom: 30px;
+            & img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+/* banner */
+
+/* services */
+@media screen and (min-width: $desktop-width) {
+    .services {
+        background-image: url(../images/services_bg.jpg);
+        background-size: contain;
+        background-position: left;
+        background-repeat: no-repeat;
+        margin-top: 88px;
+        margin-bottom: 44px;
+        padding-top: 34px;
+        padding-bottom: 159px;
+    }
+}
+
+.services .background, .reviews .background {
+        background-color: rgba(0, 0, 0, 0.8);
+        background-size: cover;
+        background-position: center;
+        padding-bottom: 64px;
+        width: 100%;
+}
+
+.set-services {
+    padding-top: 16px;
+    & .service {
         display: flex;
         align-items: center;
+        padding-top: 24px;
+        & .tool-icon {
+            max-width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+        }
+    }
+}
+
+@media screen and (min-width: $tablet-width) {
+    .set-services {
+        padding-top: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        & .service {
+            min-width: 48%;
+            padding-top: 60px;
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    .set-services {
+        & .service {
+            min-width: 33%;
+        }
+    }
+}
+
+.service-description {
+    color: $light-text-color;
+    & h3 {
+        font-weight: 700;
+        text-transform: uppercase;
+        @media screen and (min-width: $tablet-width) {
+            text-transform: none;
+            font-size: 32px;
+        }
+    }
+}
+
+@media screen and (min-width: $tablet-width) {
+    .chapter-services.dotted {
+        display: flex;
+        justify-content: center;
+        text-decoration: capitalize;
+        & h3 {
+            font-size: 32px;
+            text-transform: capitalize;
+        }
+    }    
+}
+
+@media screen and (min-width: $desktop-width) {
+    .chapter-services.dotted {
+        & h3 {
+            font-size: 64px;
+        }
+    }    
+}
+/* services */
+
+/* team */
+.chapter-team.dotted {
+    justify-content: flex-end;
+    @media screen and (min-width: $tablet-width) {
+        & h3 {
+            font-size: 32px;
+            text-transform: capitalize;
+        }
+    }
+    @media screen and (min-width: $desktop-width) {
+        & h3 {
+            font-size: 64px;
+        }
+    }
+}
+
+.persons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    & .slider-arrow {
+        margin-left: 8px;
+    }
+    & .slider-arrow.desktop-only {
+        margin-right: 8px;
+    }
+}
+
+.person {
+    margin-right: 8px;
+    background-color: transparent;
+    padding: 17px 0;
+    img {
+        display: block;
+    }
+}
+
+.person.active {
+    margin-left: 17px;
+    background-color: $main-brand-color;
+    img {
+        position: relative;
+        left: -17px;
+    }
+}
+
+.person-image-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+@media screen and (min-width: $tablet-width) {
+    .persons {
+        .slider-arrow {
+            margin-bottom: 17px;
+        }
+    }
+    .person {
+        margin-right: 8px;
+    }
+}
+
+.team .container_ .person-story {
+    padding-bottom: 32px;
+    @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+        padding-left: 192px;
+        padding-right: 135px;
+    }
+}
+
+@media screen and (max-width: $tablet-width) {
+    .person:not(:nth-child(2)) {
+        display: none;
+    }    
+}
+
+@media screen and (min-width: $desktop-width) {
+    .team .container_ {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 60px;
+        & .chapter-team.dotted {
+            width: 100%;
+        }
+        & .persons {
+            max-width: 64%;
+        }
+        & .person-story {
+            max-width: 34%;
+            & h4 {
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+/* end team */
+
+/* start book */
+
+@media screen and (min-width: $tablet-width) {
+    .book {
+        background-image: -webkit-image-set( url("../images/book_tab_bg.jpg") 1x, url("../images/book_tab_bg@2x.jpg") 2x );
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media screen and (min-width: $desktop-width) {
+            background-image: -webkit-image-set( url("../images/book_desk_bg.jpg") 1x, url("../images/book_desk_bg@2x.jpg") 2x );
+        }
+    }
+}
+
+.book {
+    & .background {
+        @media screen and (min-width: $tablet-width) {
+            background-color: rgba(0, 0, 0, 0.7);
+            background-size: cover;
+            background-position: center;
+            padding: 64px 44px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        & .container_ {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            & h3 {
+                padding-top: 45px;
+                padding-bottom: 25px;
+                text-align: center;
+                @media screen and (max-width: $tablet-width) {
+                    text-transform: uppercase;
+                }
+                @media screen and (min-width: $tablet-width) {
+                    font-size: 32px;
+                    width: 60%;
+                }
+                @media screen and (min-width: $desktop-width) {
+                    font-size: 32px;
+                    width: 70%;
+                }
+            }
+            & > p {
+                padding-bottom: 16px;
+                text-align: center;
+            }
+            & .form {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $tablet-width) {
+    .form {
+        & .dt {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 0px;
+            .date, .time {
+                width: 48%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $tablet-width) {
+    .book {
+        & .background {
+            & .container_ {
+                background-color: $white-brand-color;
+                background-size: cover;
+                background-position: center;
+                width: 90vw;
+                border-radius: 4px;
+                padding-bottom: 64px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    .book {
+        & .background {
+            & .container_ {
+                width: 45vw;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    .form {
+        max-width: 75%;
+    }
+}
+
+.form > div, .form .dt > div {
+    margin-top: 36px;
+    & p {
+        margin-bottom: 8px;
+    }
+    & input, textarea {
+        width: 100%;
+        resize: none;
+    }
+}
+
+.service-form-content, .master-form-content {
+    padding: 19px;
+    border-radius: 4px;
+    border: 1px solid $light-grey-color;
+}
+
+@media screen and (min-width: $tablet-width) {
+    .service-form-content, .master-form-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        & .checkbox-container, .radio-container {
+            width: 48%;
+        }
+    }
+}
+
+@media screen and (max-width: $tablet-width) {
+    .form .buttons, .nav .container_ .header-buttons, .banner .container_ .banner-buttons {
+        & button {
+            width: 100%;
+            padding: 16px auto 16px auto;
+            white-space: nowrap;
+        }
+    }
+}
+
+@media screen and (min-width: $tablet-width) {
+    .form .buttons {
+        display: flex;
         justify-content: center;
     }
 }
 
+
+/* end book */
+
+/* Start product */
+
+@media screen and (min-width: $tablet-width) {
+    .products {
+        padding-top: 64px;
+        padding-bottom: 87px;
+        padding-left: 32px;
+        padding-right: 102px;
+        & .container_ {
+            & .dotted {
+                display: flex;
+                text-decoration: capitalize;
+                & h3 {
+                    font-size: 32px;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    .products {
+        & .container_ {
+            & .dotted {
+                & h3 {
+                    font-size: 64px;
+                }
+            }
+        }
+    }
+}
+
+.products-kit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    @media screen and (max-width: $tablet-width) {
+        justify-content: center;
+    }
+    @media screen and (min-width: $desktop-width) {
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (max-width: $tablet-width) {
+    .product:not(:first-child) {
+        display: none;
+    }
+}
+
+.products .container_ .arrows {
+    display: none;
+    @media screen and (max-width: $tablet-width) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 32px;
+    }
+}
+
+
+/* End product */
+
+/* Start reviews */
+
+@media screen and (min-width: $tablet-width) {
+    .reviews {
+        & .container_ {
+            & .dotted {
+                display: flex;
+                justify-content: flex-end;
+                text-decoration: capitalize;
+                & h3 {
+                    font-size: 32px;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    .reviews {
+        & .container_ {
+            & .dotted {
+                justify-content: flex-start;
+                & h3 {
+                    font-size: 64px;
+                }
+            }
+        }
+    }
+}
+
+.reviews {
+    background-image: -webkit-image-set( url("../images/review_bg_note&tablet1.jpg") 1x, url("../images/review_bg_note&tablet1@2x.jpg") 2x );
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media screen and (max-width: $tablet-width) {
+        background-image: -webkit-image-set( url("../images/review_bg_mob.jpg") 1x, url("../images/review_bg_mob@2x.jpg") 2x );
+    }
+    & p {
+        color: $light-text-color;
+    }
+}
+
+.reviews .container_ .person-story {
+    @media screen and (min-width: $tablet-width) {
+        padding-left: 235px;
+        padding-right: 92px;
+    }
+    @media screen and (min-width: $desktop-width) {
+        max-width: 85%;
+        padding-left: 400px;
+        padding-right: 0;
+        & h4 {
+            font-size: 32px;
+        }
+    }
+}
+
+.person.active-r {
+    margin-left: 17px;
+    background-color: transparent;
+    border: 3px solid $light-text-color;
+    img {
+        position: relative;
+        left: -17px;
+    }
+}
+
+.desktop-only {
+    display: none;
+    @media screen and (min-width: $desktop-width) {
+        display: block;
+    }
+}
+
+/* End reviews */
+
+/* Start where */
+
+.where {
+    padding-top: 42px;
+    & .contact-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    & .follow-items {
+        padding-top: 20px;
+    }
+
+    & .schedule {
+        padding-top: 30px;
+    }
+
+    & a {
+        line-height: 32px;
+    }
+    & .background {
+        background-image: url("../images/map.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        width: 100vw;
+        height: 59vh;
+    }
+}
+
+@media screen and (min-width: $tablet-width) {
+    .where {
+        padding-top: 110px;
+        padding-bottom: 110px;
+        & .container_ {
+            display: flex;
+            justify-content: space-evenly;
+            font-weight: 700;
+            & .schedule {
+                padding-top: 0;
+            } 
+            & h4 {
+                font-size: 32px;
+                text-transform: capitalize;
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: $desktop-width) {
+    .map {
+        display: none;
+    }
+}
+@media screen and (min-width: $desktop-width) {
+    .map {
+        display: block;
+    }
+    .where {
+        & .container_ {
+            display: grid;
+            grid-template-columns: 1fr, 2fr;
+            grid-column-gap: 40px;
+
+            & h4 {
+                font-size: 64px;
+            }
+    
+            & .contact-us {
+                grid-column: 1 / 2;
+                grid-row: 1;
+            }
+    
+            & .schedule {
+                grid-column: 1 / 2;
+                grid-row: 2;
+            }
+    
+            & .map {
+                grid-column: 2 / 2;
+                grid-row: 1/3;
+            }
+        }
+        & .background {
+            display: none;
+        }
+
+    }
+}
+
+/* End where */

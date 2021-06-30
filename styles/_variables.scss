@@ -21,7 +21,33 @@ $dark-grey-color: #9A9A9A;
 $grey-color: #DFDFDF;
 $light-grey-color: #DFDFDF;
 $text-color: #C4C4C4;
+$hover-button-color1: #3d3a37;
+$hover-button-color2: #FFE8D1;
 
 $tablet-width: 769px;
 $desktop-width: 1200px;
 
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+h4 {
+    font-weight: 700;
+    padding-bottom: 16px;
+    color: $main-brand-color;
+}
+.capitalized {
+    text-transform: capitalize;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
