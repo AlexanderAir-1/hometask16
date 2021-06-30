@@ -600,7 +600,7 @@ a {
 
 .desktop-only {
     display: none;
-    @media screen and (min-width: $desktop-width) {
+    @media screen and (min-width: $tablet-width) {
         display: block;
     }
 }
